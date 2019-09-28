@@ -49,46 +49,8 @@ namespace OHRecord
             //add text to record text
             //use stack and entry to show the detail instead of editor (for easy scroll)
             string text = fileHelper.ReadText(filename);
-            string currtext = "";
-            //add text to record text
-            for (int i = 0; i < text.Length; i++)
-            {
-                if(text[i] == '\n')
-                {
-                    Entry currEntry = new Entry
-                    {
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        Text = currtext,
-                    };
-                    recordEntry.Add(currEntry);
-                    currtext = "";
-                }
-                else
-                {
-                    currtext += text[i];
-                }
-            }
-            //add the last text
-            Entry lastEntry = new Entry
-            {
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                Text = currtext,
-            };
-            recordEntry.Add(lastEntry);
 
-            //add to stack and add stack to scroll
-            for (int i = 0; i < recordEntry.Count; i++)
-            {
-                //StackLayout currStack = new StackLayout
-                //{
-                //    HorizontalOptions = LayoutOptions.FillAndExpand,
-                //};
-                //Entry record = new Entry
-                //{
-                //    Text = recordEntry[i].Text,
-                //};
-                recordStack.Children.Add(recordEntry[i]);
-            }
+            recordArea.Text = text;
         }
 
         void OnTickButtonClick(object sender, EventArgs args)
@@ -99,12 +61,8 @@ namespace OHRecord
         async void OnSaveButtonClick(object sender, EventArgs args)
         {
             string textToWrite = "";
-            //get text from label
-            for (int i = 0; i < recordEntry.Count; i++)
-            {
-                textToWrite = textToWrite + recordEntry[i].Text + '\n';
-            }
-            
+
+            textToWrite = recordArea.Text;            
 
             string errorMessage = null;
             try

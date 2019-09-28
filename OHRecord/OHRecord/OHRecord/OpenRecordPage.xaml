@@ -11,12 +11,8 @@
                      Activated="OnSaveButtonClick"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ScrollView x:Name="scroll"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand">
-            <StackLayout x:Name="recordStack"
-                         HorizontalOptions="FillAndExpand"
-                         VerticalOptions="FillAndExpand"/>
-        </ScrollView>
+        <Editor x:Name="recordArea"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"/>
     </ContentPage.Content>
 </ContentPage>

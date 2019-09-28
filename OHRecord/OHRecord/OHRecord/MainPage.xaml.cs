@@ -112,12 +112,20 @@ namespace OHRecord
             RefreshList();
         }
 
-        void OnDeleteButtonClick(object sender, EventArgs args)
+        async void OnDeleteButtonClick(object sender, EventArgs args)
         {
+            bool isDeleteComfirmed = false;
             Button button = (Button)sender;
-            string filename = button.StyleId;
-            fileHelper.Delete(filename);
-            RefreshList();
+
+            Task<bool> comfirmDelete = DisplayAlert("Are you sure to delete the select item", "", "yes", "no");
+            isDeleteComfirmed = await comfirmDelete;
+
+            if (true == isDeleteComfirmed)
+            {
+                string filename = button.StyleId;
+                fileHelper.Delete(filename);
+                RefreshList();
+            }
         }
         
         void OnRefreshButtonClick(object sender, EventArgs args)
