@@ -11,14 +11,19 @@
                      Activated="OnButtonSaveClick"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="Black">
             <Entry x:Name="OhAp"
+                   BackgroundColor="#333333"
+                   TextColor="White"
                    HorizontalOptions="FillAndExpand"
                    VerticalOptions="Start"
-                   Placeholder="OH or AP"/>
+                   Placeholder="BO or AP"
+                   PlaceholderColor="White"/>
             <Editor x:Name="entry"
-                   HorizontalOptions="FillAndExpand"
-                   VerticalOptions="FillAndExpand"
+                    BackgroundColor="#333333"
+                    TextColor="White"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
                     TextChanged="OnEntryChange"/>
         </StackLayout>
     </ContentPage.Content>

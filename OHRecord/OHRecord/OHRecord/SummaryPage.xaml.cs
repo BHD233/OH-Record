@@ -12,6 +12,7 @@ namespace OHRecord
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SummaryPage : ContentPage
     {
+        public static string backGroundColor = "333333";
         List<string> labelText = new List<string>();
         FileHelper fileHelper = new FileHelper();
         public SummaryPage(string filename)
@@ -24,6 +25,8 @@ namespace OHRecord
                 Entry currEntry = new Entry
                 {
                     Text = t,
+                    BackgroundColor = Color.FromHex(backGroundColor),
+                    TextColor = Color.White,
                     HorizontalOptions = LayoutOptions.FillAndExpand,
                 };
                 recordStack.Children.Add(currEntry);
@@ -80,7 +83,7 @@ namespace OHRecord
             rawLabel.Sort();
 
             currtext = rawLabel[0];
-            i = 0;
+            i = 1;
             int sum = 1;
             while(i < rawLabel.Count)
             {
@@ -97,6 +100,11 @@ namespace OHRecord
                 }
                 i++;
             }
+
+            //add the last element
+            currtext = currtext + "  " + sum.ToString();
+            labelText.Add(currtext);
+
         }
     }
 }

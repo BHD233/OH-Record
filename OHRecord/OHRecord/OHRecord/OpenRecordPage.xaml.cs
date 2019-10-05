@@ -35,7 +35,6 @@ namespace OHRecord
     {
         FileHelper fileHelper = new FileHelper();
         string fileToSave = null;
-        List<Entry> recordEntry = new List<Entry>();
         public OpenRecordPage(string filename)
         {
             Title = filename;

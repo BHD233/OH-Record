@@ -19,9 +19,10 @@
                      Activated="OnRefreshButtonClick"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <ScrollView>
-                <StackLayout x:Name="listStack"/>
+        <StackLayout BackgroundColor="Black">
+            <ScrollView BackgroundColor="Black">
+                <StackLayout x:Name="listStack"
+                             BackgroundColor="#333333"/>
             </ScrollView>
         </StackLayout>
     </ContentPage.Content>

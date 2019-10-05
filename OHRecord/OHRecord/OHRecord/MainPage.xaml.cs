@@ -11,21 +11,28 @@ namespace OHRecord
 {
     public class RecordTitle
     {
+        public static string backGroundColor = "333333";
         public Button summaryButton = new Button
         {
             Text = "...",
+            BackgroundColor = Color.FromHex(backGroundColor),
+            TextColor = Color.White,
             WidthRequest = Device.GetNamedSize(NamedSize.Small, typeof(Button)) * 3,
             FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Button)),
         };
         public Button viewButton = new Button
         {
             Text = "View",
+            BackgroundColor = Color.FromHex(backGroundColor),
+            TextColor = Color.White,
             WidthRequest = Device.GetNamedSize(NamedSize.Small, typeof(Button)) * 4,
             FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Button)),
         };
         public Button deleteButton = new Button
         {
             Text = "X",
+            BackgroundColor = Color.FromHex(backGroundColor),
+            TextColor = Color.White,
             WidthRequest = Device.GetNamedSize(NamedSize.Small, typeof(Button)) * 3,
             FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Button)),
         };
@@ -33,6 +40,8 @@ namespace OHRecord
         {
             FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
             HorizontalOptions = LayoutOptions.CenterAndExpand,
+            BackgroundColor = Color.FromHex(backGroundColor),
+            TextColor = Color.White,
         };
         public StackLayout GetTitle()
         {

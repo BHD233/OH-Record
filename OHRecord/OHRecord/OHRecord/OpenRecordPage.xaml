@@ -12,7 +12,9 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <Editor x:Name="recordArea"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand"/>
+                    BackgroundColor="#333333"
+                    TextColor="White"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"/>
     </ContentPage.Content>
 </ContentPage>

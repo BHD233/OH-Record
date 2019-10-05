@@ -17,7 +17,6 @@ namespace OHRecord
         int startTime = 0;
         string fileName = null;
         bool isGetedName = false;
-
         public NewRecordPage()
         {
             Title = "Create New Record";
@@ -30,16 +29,16 @@ namespace OHRecord
         async void OnEntryChange(object sender, EventArgs args)
         {
             //fix text of OhAp
-            if (OhAp.Text == "oh" || OhAp.Text == "Oh" || OhAp.Text == "oH")
+            if (OhAp.Text == "bo" || OhAp.Text == "Bo" || OhAp.Text == "bO")
             {
-                OhAp.Text = "OH";
+                OhAp.Text = "BO";
             }
             if (OhAp.Text == "ap" || OhAp.Text == "Ap" || OhAp.Text == "aP")
             {
                 OhAp.Text = "AP";
             }
 
-            if (!isGetedName && (OhAp.Text == "OH" || OhAp.Text == "AP"))
+            if (!isGetedName && (OhAp.Text == "BO" || OhAp.Text == "AP"))
             {
                 fileName = OhAp.Text + DateTime.Today.ToString("dd-MM");
                 isGetedName = true;

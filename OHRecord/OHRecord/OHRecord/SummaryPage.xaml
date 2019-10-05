@@ -11,8 +11,10 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ScrollView HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand">
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="Black">
             <StackLayout x:Name="recordStack"
+                         BackgroundColor="Black"
                          HorizontalOptions="FillAndExpand"
                          VerticalOptions="FillAndExpand"/>
         </ScrollView>

@@ -1,5 +1,4 @@
-	.arch	armv8-a
-	.file	"environment.arm64-v8a.s"
+	.file	"environment.x86.s"
 	.section	.rodata..L.str.1,"aMS",@progbits,1
 	.type	.L.str.1, @object
 .L.str.1:
@@ -7,7 +6,7 @@
 	.size	.L.str.1, 25
 	.section	.data.application_config,"aw",@progbits
 	.type	application_config, @object
-	.p2align	3
+	.p2align	2
 	.global	application_config
 application_config:
 	/* uses_mono_llvm */
@@ -22,12 +21,12 @@ application_config:
 	.byte	0
 	/* environment_variable_count */
 	.zero	3
-	.word	10
+	.long	10
 	/* system_property_count */
-	.word	0
+	.long	0
 	/* android_package_name */
-	.xword	.L.str.1
-	.size	application_config, 24
+	.long	.L.str.1
+	.size	application_config, 20
 	.section	.rodata..L.str.2,"aMS",@progbits,1
 	.type	.L.str.2, @object
 .L.str.2:
@@ -36,7 +35,7 @@ application_config:
 	.section	.data.mono_aot_mode_name,"aw",@progbits
 	.global	mono_aot_mode_name
 mono_aot_mode_name:
-	.xword	.L.str.2
+	.long	.L.str.2
 	.section	.rodata..L.str.3,"aMS",@progbits,1
 	.type	.L.str.3, @object
 .L.str.3:
@@ -65,7 +64,7 @@ mono_aot_mode_name:
 	.section	.rodata..L.str.8,"aMS",@progbits,1
 	.type	.L.str.8, @object
 .L.str.8:
-	.asciz	"5ff9a5e7-009a-4c0e-aff9-cbf0ef5cdabf"
+	.asciz	"93845c91-bc23-417e-bb32-8c4676238d0b"
 	.size	.L.str.8, 37
 	.section	.rodata..L.str.9,"aMS",@progbits,1
 	.type	.L.str.9, @object
@@ -89,23 +88,23 @@ mono_aot_mode_name:
 	.size	.L.str.12, 5
 	.section	.data.app_environment_variables,"aw",@progbits
 	.type	app_environment_variables, @object
-	.p2align	3
+	.p2align	2
 	.global	app_environment_variables
 app_environment_variables:
-	.xword	.L.str.3
-	.xword	.L.str.4
-	.xword	.L.str.5
-	.xword	.L.str.6
-	.xword	.L.str.7
-	.xword	.L.str.8
-	.xword	.L.str.9
-	.xword	.L.str.10
-	.xword	.L.str.11
-	.xword	.L.str.12
-	.size	app_environment_variables, 80
+	.long	.L.str.3
+	.long	.L.str.4
+	.long	.L.str.5
+	.long	.L.str.6
+	.long	.L.str.7
+	.long	.L.str.8
+	.long	.L.str.9
+	.long	.L.str.10
+	.long	.L.str.11
+	.long	.L.str.12
+	.size	app_environment_variables, 40
 	.section	.data.app_system_properties,"aw",@progbits
 	.type	app_system_properties, @object
-	.p2align	3
+	.p2align	2
 	.global	app_system_properties
 app_system_properties:
 	.size	app_system_properties, 0
