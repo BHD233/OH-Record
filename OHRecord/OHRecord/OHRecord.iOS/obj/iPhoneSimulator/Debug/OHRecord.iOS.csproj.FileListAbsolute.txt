@@ -113,7 +113,6 @@ D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord.iOS\obj\iPhoneSimulator\Debug\cor
 D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
 D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord.iOS\obj\iPhoneSimulator\Debug\optimized\
 D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord.iOS\obj\iPhoneSimulator\Debug\OHRecord.iOS.csprojAssemblyReference.cache
-D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord.iOS\obj\iPhoneSimulator\Debug\OHRecord.iOS.csproj.CoreCompileInputs.cache
 D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord.iOS\obj\iPhoneSimulator\Debug\XamlC.stamp
 D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord.iOS\obj\iPhoneSimulator\Debug\OHRecord.iOS.csproj.CopyComplete
 D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord.iOS\obj\iPhoneSimulator\Debug\OHRecord.iOS.exe

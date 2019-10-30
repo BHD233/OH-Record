@@ -37,7 +37,6 @@ D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord\obj\Debug\netstandard2.0\Views\It
 D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
 D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord\obj\Debug\netstandard2.0\Views\MenuPage.xaml.g.cs
 D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
-D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord\obj\Debug\netstandard2.0\OHRecord.csproj.CoreCompileInputs.cache
 D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord\obj\Debug\netstandard2.0\OHRecord.AssemblyInfoInputs.cache
 D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord\obj\Debug\netstandard2.0\OHRecord.AssemblyInfo.cs
 D:\GitHub\OH-Record\OHRecord\OHRecord\OHRecord\obj\Debug\netstandard2.0\XamlC.stamp

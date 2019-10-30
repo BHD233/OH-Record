@@ -30,6 +30,7 @@ namespace OHRecord
 
         public void WriteText(string filename, string text)
         {
+            filename += ".BHD";
             fileHelper.WriteText(filename, text);
         }
 
@@ -45,8 +46,10 @@ namespace OHRecord
 
             foreach (string filepath in filepaths)
             {
-                filenames.Add(Path.GetFileName(filepath));
+                string filename = Path.GetFileName(filepath);
+                filenames.Add(filename);
             }
+
             return filenames;
         }
 
@@ -54,5 +57,6 @@ namespace OHRecord
         {
             fileHelper.Delete(filename);
         }
+
     }
 }
