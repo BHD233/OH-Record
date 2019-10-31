@@ -30,7 +30,6 @@ namespace OHRecord
 
         public void WriteText(string filename, string text)
         {
-            filename += ".BHD";
             fileHelper.WriteText(filename, text);
         }
 

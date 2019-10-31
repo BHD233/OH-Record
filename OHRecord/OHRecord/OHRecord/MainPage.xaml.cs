@@ -59,10 +59,11 @@ namespace OHRecord
             return mainStack;
         }
     }
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
-        private string endFile = ".BHD";
+        public static string endFile = ".BHD";
         IFileHelper fileHelper = DependencyService.Get<IFileHelper>();
 
         public MainPage()
@@ -71,7 +72,7 @@ namespace OHRecord
 
             InitializeComponent();
 
-            RefreshList();
+            //RefreshList();
         }
 
         private string GetFileName(string titleString)
@@ -228,21 +229,18 @@ namespace OHRecord
         async void OnAddButtonClick(object sender, EventArgs args)
         {
             await Navigation.PushAsync(new NewRecordPage());
-            RefreshList();
         }
 
         async void OnSummaryButtonClick(object sender, EventArgs args)
         {
             Button button = (Button)sender;
             await Navigation.PushAsync(new SummaryPage(button.StyleId));
-            RefreshList();
         }
 
         async void OnViewButtonClick(object sender, EventArgs args)
         {
             Button button = (Button)sender;
             await Navigation.PushAsync(new OpenRecordPage(button.StyleId));
-            RefreshList();
         }
 
         async void OnDeleteButtonClick(object sender, EventArgs args)
@@ -264,6 +262,14 @@ namespace OHRecord
         void OnRefreshButtonClick(object sender, EventArgs args)
         {
             RefreshList();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            RefreshList();
+
         }
     }
 }

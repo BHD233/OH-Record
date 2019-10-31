@@ -42,6 +42,7 @@ namespace OHRecord.Droid
         //prtivate methods
         string GetFilePath(string filename)
         {
+            filename += MainPage.endFile;
             return Path.Combine(GetDocsPath(), filename);
         }
 
