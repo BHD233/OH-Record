@@ -172,17 +172,33 @@ namespace OHRecord
             return true;
         }
 
+        //Assume that date in format dd-mm
         private int GetRelativeDateOfString(string filename)
         {
             int date = 0;
+            bool isMonth = false;
+            int day = 0;
+            int month = 0;
 
             for (int i = 0; i < filename.Length; i++)
             {
                 if (filename[i] >= '0' && filename[i] <= '9')
                 {
-                    date = date * 10 + int.Parse(filename[i].ToString());
+                    if (!isMonth)
+                    {
+                        day = day * 10 + int.Parse(filename[i].ToString());
+                    }
+                    else
+                    {
+                        month = month * 10 + int.Parse(filename[i].ToString());
+                    }
+                }
+                if (filename[i] == '-')
+                {
+                    isMonth = true;
                 }
             }
+            date = month * 10 + date;
 
             return date;
         }
